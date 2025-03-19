@@ -287,7 +287,7 @@ a.btn:nth-child(2)::before{
 
 .img-box img{
     width: 100%;
-    max-width: 350px;
+    max-width: 450px;
     height: auto;
 }
 
@@ -576,6 +576,186 @@ a.btn:nth-child(2)::before{
     animation: glow 0.5s linear forwards;
     animation-delay: calc(var(--i) * 0.05s);
 }
+
+/*Projects Section*/
+
+.filter-buttons {
+    margin: 2rem; 
+    text-align: center; 
+}
+
+.filter-buttons .btn {
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    margin-left: 1.3rem;
+    color: var(--text-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.filter-buttons .btn:hover {
+    color: var(--hover-color);
+}
+
+.portfolio-gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 2rem;
+}
+
+.port-box{
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #292e33;
+    display: flex;
+    grid-template-rows: 1fr auto;
+    align-items: center;
+    border: 2px solid var(--hover-color);
+    box-shadow: var(--neon-box-shadow);
+}
+
+.port-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.port-image img{
+    width: 100%;
+    opacity: .5s;
+    height: 100%;
+    transition: .5s;
+}
+
+.port-content {
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), #12f7ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    text-align: center;
+    transition: 0.5s;
+    padding: 0.2rem;
+}
+
+.port-box:hover .port-content{
+    opacity: 1;
+}
+
+.port-box:hover .port-content{
+    transform: scale(1.1);
+}
+
+.port-content h3{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.port-content p{
+    font-size: .8rem;
+    margin: 5px 0 15px 0;
+}
+
+.port-content a {
+    background: #fff;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--hover-color);
+    outline: 2px solid #fff;
+}
+
+.port-content a i{
+    font-size: 1.3rem;
+    color: var(--secon-bg-color);
+}
+
+/*Contact Section*/
+.contact {
+    background: var(--secon-bg-color);
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.contact form {
+    text-align: center;
+    max-width: 50rem;
+    margin: 1rem auto;
+    margin-bottom: 3rem;
+    background: var(--bg-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--neon-box-shadow);
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    color: var(--text-color);
+    background: var(--bg-color);
+    margin-bottom: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    padding: 0.7rem;
+    outline: 1px solid var(--hover-color);
+    transition: 0.3s;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+    outline: 2px solid var(--hover-color);
+}
+
+.contact form textarea {
+    resize: none;
+    height: 150px;
+}
+
+/* Send Message Button Styled Like Read More Button */
+.formBtn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.formBtn button {
+    background: var(--hover-color);
+    color: var(--bg-color);
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: var(--neon-box-shadow);
+    transition: 0.3s;
+}
+
+.formBtn button:hover {
+    background: var(--text-color);
+    color: var(--hover-color);
+    box-shadow: 0 0 10px var(--hover-color), 0 0 40px var(--hover-color);
+}
+
+
+
 
 
 
