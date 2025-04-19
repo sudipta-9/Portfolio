@@ -10,13 +10,12 @@ const Footer = () => {
     <footer
       className="bg-black text-white px-6 py-12 relative z-10"
       style={{
-        background: "linear-gradient(145deg, #000000, #001d13)",
-        boxShadow: "inset 0 0 60px #00ff95",
+        background: "linear-gradient(145deg, #000000, #002244)", 
+        boxShadow: "inset 0 0 60px #00f0ff", 
       }}
     >
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
 
-        {/* Social Icons */}
         <div className="flex gap-6 text-2xl">
           <a
             href="https://instagram.com"
@@ -27,7 +26,7 @@ const Footer = () => {
             <FaInstagram />
           </a>
           <a
-            href="https://facebook.com"
+            href="https://www.facebook.com/sudipta.kumar.das.470944/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-neon-green transition-transform duration-300 transform hover:-translate-y-2 hover:scale-125 drop-shadow-[0_0_8px_#00ff95]"
@@ -35,7 +34,7 @@ const Footer = () => {
             <FaFacebookF />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/sudipta-kumar-das-672743276/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-neon-green transition-transform duration-300 transform hover:-translate-y-2 hover:scale-125 drop-shadow-[0_0_8px_#00ff95]"
@@ -44,12 +43,10 @@ const Footer = () => {
           </a>
         </div>
 
-        {/* Copyright */}
         <p className="text-sm text-white text-center drop-shadow-[0_0_6px_#00ff95]">
-          © {new Date().getFullYear()} <span className="text-neon-green">YourName</span>. All rights reserved.
+          © {new Date().getFullYear()} <span className="text-neon-orange">Sudipta Kumar Das</span>. All rights reserved.
         </p>
 
-        {/* Scroll to Top Button */}
         <button
           onClick={scrollToTop}
           className="relative bg-neon-green text-white font-bold px-6 py-3 rounded-full overflow-hidden group shadow-lg transform hover:scale-110 transition duration-300"

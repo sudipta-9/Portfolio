@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+
 import htmlLogo from "../../assets/tech_logo/html.png";
 import cssLogo from "../../assets/tech_logo/css.png";
 import sassLogo from "../../assets/tech_logo/sass.png";
@@ -82,20 +83,37 @@ const SkillsSection = () => {
   return (
     <section
       id="skills"
-      className="min-h-screen w-full px-4 md:px-[8vw] py-20 bg-[#0f0f0f] flex flex-col items-center"
+      className="min-h-screen w-full px-4 md:px-[8vw] py-20 flex flex-col items-center"
       style={{
-        background: "linear-gradient(135deg, #00ffa320 0%, #000000 100%)",
-        boxShadow: "inset 0 0 80px #00ff95",
+        background: "linear-gradient(135deg, #000000 0%, #002244 100%)",
+        boxShadow: "inset 0 0 100px #007BFF",
       }}
     >
-      <h2 className="text-4xl md:text-5xl font-bold text-white mb-16 text-center drop-shadow-[0_0_10px_#00ffcc]">
-        <span className="text-white">My</span> Skills
-      </h2>
+      {/* Heading */}
+      <div className="text-center mb-16">
+        <motion.h2
+          className="text-4xl md:text-5xl font-bold text-[#ff914d] drop-shadow-[0_0_15px_#ff914d]"
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <span className="text-white">My</span> Skills
+        </motion.h2>
 
+        {/* Animated Underline */}
+        <motion.div
+          className="w-32 h-1 rounded-full bg-[#309fe9] mx-auto mt-3 shadow-[0_0_10px_#00bfff]"
+          initial={{ width: 0 }}
+          animate={{ width: "8rem" }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        />
+      </div>
+
+      {/* Skills Grid */}
       <div className="w-full space-y-16">
         {SkillsInfo.map((category, index) => (
           <div key={index}>
-            <h3 className="text-2xl font-semibold mb-6 text-white drop-shadow-[0_0_6px_#00ffc8] text-center md:text-left">
+            <h3 className="text-2xl font-semibold mb-6 text-[#ffc857] drop-shadow-[0_0_10px_#ffc857] text-center md:text-left">
               {category.title}
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
@@ -105,14 +123,18 @@ const SkillsSection = () => {
                   whileHover={{ scale: 1.1, rotate: 2 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ type: "spring", stiffness: 300 }}
-                  className="bg-[#151515] p-5 rounded-2xl shadow-[0_0_20px_#00ffb3] border border-[#00ff95] hover:shadow-[0_0_30px_#00ff95] transition-all duration-300 flex flex-col items-center justify-center"
+                  className="bg-white/5 border border-[#ff914d]/20 backdrop-blur-lg rounded-2xl p-5 
+                             shadow-[0_0_25px_#ff914d] hover:shadow-[0_0_50px_#ff914d] 
+                             transition-all duration-300 flex flex-col items-center justify-center"
                 >
                   <img
                     src={skill.logo}
                     alt={skill.name}
-                    className="w-12 h-12 mb-3 object-contain"
+                    className="w-12 h-12 mb-3 object-contain rounded"
                   />
-                  <p className="text-sm text-white text-center">{skill.name}</p>
+                  <p className="text-sm font-medium text-white text-center">
+                    {skill.name}
+                  </p>
                 </motion.div>
               ))}
             </div>

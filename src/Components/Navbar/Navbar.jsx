@@ -29,9 +29,8 @@ const Navbar = () => {
     { id: "about", label: "About" },
     { id: "education", label: "Education" },
     { id: "skills", label: "Skills" },
-    { id: "work", label: "Projects" },
     { id: "experience", label: "Experience" },
-    { id: "contact", label: "Contact" }, // Contact Section
+    { id: "contact", label: "Contact" }, 
   ];
 
   return (
@@ -43,7 +42,6 @@ const Navbar = () => {
       }`}
     >
       <div className="flex items-center justify-between">
-        {/* Logo */}
         <motion.div
           className="text-xl sm:text-2xl font-bold text-white tracking-wide flex items-center gap-1"
           initial={{ opacity: 0, y: -20 }}
@@ -56,7 +54,6 @@ const Navbar = () => {
           <span className="text-[#00ffa3]">&gt;</span>
         </motion.div>
 
-        {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8">
           <ul className="flex space-x-6 font-medium text-white">
             {menuItems.map((item) => (
@@ -102,7 +99,6 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Icon */}
         <div className="md:hidden">
           {isOpen ? (
             <FiX
@@ -118,7 +114,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
         <motion.div
           initial={{ opacity: 0, y: -10 }}
