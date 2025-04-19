@@ -4,26 +4,40 @@ import { FaCode } from "react-icons/fa";
 
 const projects = [
   {
-    title: "AI-Powered Tutor",
+    title: "Amazon Clone Website",
     description:
-      "An adaptive learning platform offering real-time assistance, progress tracking, and personalized learning paths.",
-    skills: ["React", "Node.js", "OpenVINO", "Tailwind CSS"],
-    codeLink: "https://github.com/sudipta-9/ai-tutor",
+      "Developed an Amazon clone website using HTML, CSS, and JavaScript, replicating key features such as homepage layout, product listings, and responsive design to enhance frontend development skills.",
+    skills: ["HTML", "CSS", "JavaScript"],
+    codeLink: "https://github.com/sudipta-9/Amazon-Clone",
   },
   {
     title: "Smart Education System",
     description:
-      "MERN stack-based system for managing students, classes, results, and study materials.",
+      "A MERN stack-based platform designed to offer diverse course and job opportunities, while supporting personalized learning and skill development for students.",
     skills: ["MongoDB", "Express.js", "React", "Node.js"],
-    codeLink: "https://github.com/sudipta-9/smart-edu",
+    codeLink: "https://github.com/sudipta-9/Smart-Education-System",
   },
   {
-    title: "Bug Detection AI",
+    title: "Hotel Booking Dashboard",
     description:
-      "ML project that detects and auto-fixes code bugs using trained models and static analysis.",
-    skills: ["Python", "TensorFlow", "Scikit-learn", "Docker"],
-    codeLink: "https://github.com/sudipta-9/bug-ai",
+      "I create a dashboard of hotel booking system in excel. I take data form kaggle and after modify this create a dashboard",
+    skills: ["Excel", "Vizualisation", "Data Cleaning"],
+    codeLink: "https://github.com/sudipta-9/Hotel_Booking",
   },
+  {
+    title: "Company Member Details",
+    description:
+      "Created a responsive company team member page using HTML, CSS, and Bootstrap, showcasing team profiles with images, roles, and social links, optimized for all screen sizes.",
+    skills: ["HTML", "CSS", "Bootstrap"],
+    codeLink: "https://github.com/sudipta-9/VeriTech-Software-IT-Services",
+  },
+  {
+    title: "CRUD Application",
+    description:
+      "Built a CRUD (Create, Read, Update, Delete) application using HTML, CSS, and JavaScript, enabling users to manage data dynamically with an interactive and responsive interface.",
+    skills: ["HTML", "CSS", "JavaScript"],
+    codeLink: "https://github.com/sudipta-9/CRUD-Application",
+  }
 ];
 
 const Experience = () => {

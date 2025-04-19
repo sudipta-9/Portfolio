@@ -115,23 +115,16 @@ const Navbar = () => {
       </div>
 
       {isOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-          className="absolute top-16 left-1/2 transform -translate-x-1/2 w-[90%] sm:w-4/5 bg-[#050414] bg-opacity-70 backdrop-blur-lg z-50 rounded-xl shadow-[0_0_25px_#00ff95] md:hidden"
-        >
-          <ul className="flex flex-col items-center space-y-5 py-6 text-white font-medium text-lg">
+        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5 bg-[#050414] bg-opacity-50 backdrop-filter backdrop-blur-lg z-50 rounded-lg shadow-lg md:hidden">
+          <ul className="flex flex-col items-center space-y-4 py-4 text-gray-300">
             {menuItems.map((item) => (
-              <li key={item.id}>
-                <button
-                  onClick={() => handleMenuItemClick(item.id)}
-                  className={`transition-all duration-200 ${
-                    activeSection === item.id
-                      ? "text-[#00ff95]"
-                      : "hover:text-[#00ffa3]"
-                  }`}
-                >
+              <li
+                key={item.id}
+                className={`cursor-pointer hover:text-white ${
+                  activeSection === item.id ? "text-[#8245ec]" : ""
+                }`}
+              >
+                <button onClick={() => handleMenuItemClick(item.id)}>
                   {item.label}
                 </button>
               </li>
@@ -155,7 +148,7 @@ const Navbar = () => {
               </a>
             </div>
           </ul>
-        </motion.div>
+        </div>
       )}
     </nav>
   );
