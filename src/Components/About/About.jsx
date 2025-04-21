@@ -39,7 +39,7 @@ const About = () => {
                 1500,
                 "Full Stack Developer",
                 1500,
-                "Data Analyst",
+                "Data Analytics",
                 1500,
               ]}
               wrapper="span"
