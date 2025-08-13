@@ -1,4 +1,3 @@
-import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import profileImage from "../photo/photo.jpg";
 
@@ -59,7 +58,7 @@ const About = () => {
           </p>
 
           <a
-            href="https://drive.google.com/file/d/1JKVAGMafPZlRlE2Y72lv9aUhS6wnS11w/view?usp=sharing"
+            href="https://drive.google.com/file/d/17K3aEtP4FnZY91QM4aqAGygNYdgqg6kC/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block mt-6 px-8 py-3 bg-gradient-to-r from-[#0d0e0e] to-[#ec0d0d] text-white font-bold rounded-xl 
